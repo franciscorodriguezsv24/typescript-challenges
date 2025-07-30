@@ -1,1 +1,2 @@
-export type MyPick<T, K> = any
+export type MyPick<T, K extends keyof T> = {[P in K]: T[P] }
+// In this exercise we made that one of the prop is the key on the object that we want persist in the implementation, so after that we maped the object and pick the elements that correspond with the previous selection.
